@@ -1,10 +1,12 @@
 <?php
 session_start();
 
-$navn       = $_POST['navn'];
-$password   = $_POST['password'];
+$navn = $_GET['navn'];
+$password = $_GET['password'];
 
 echo $navn;
 echo $password;
+
+
 
 ?>

@@ -1,5 +1,7 @@
 <?php
 
+include funktionsark.php;
+
 $servername = "root";
 $username = "root";
 $password = "neger";
