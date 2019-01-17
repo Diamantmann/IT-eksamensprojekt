@@ -8,7 +8,6 @@
             password:   <input type="text" name="password"><br>
             <input type="submit" value="login">
         </form>
-
         <button><a>opretLogin.php</a></button>
     </body>
 </html>
