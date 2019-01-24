@@ -1,11 +1,9 @@
 <?php
-
 include 'funktionsark.php';
 
 $servername = "localhost";
 $username = "root";
-$password = "";
-
+$password = "neger";
 $conn = new mysqli($servername, $username, $password);
 
 if ($conn->connect_error) {
@@ -15,6 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "CREATE DATABASE IF NOT EXISTS investeringstips";
+
 if ($conn->query($sql) === TRUE) {
 	echo "Database 'investeringstips' er oprettet";
 } else {
@@ -48,5 +47,9 @@ if ($conn->query($sql) === TRUE) {
 	echo "Tabellen 'indlæg' er oprettet";
 } else {
 	echo "Fejl ved oprettelse af tabellen 'indlæg'";
+}
+
+if (!empty($_GET["Titel"]) && !empty($_GET["Indhold"])) {
+	$conn->query
 }
 ?>
