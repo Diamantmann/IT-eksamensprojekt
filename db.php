@@ -1,10 +1,10 @@
 <?php
 
-include funktionsark.php;
+include 'funktionsark.php';
 
-$servername = "root";
+$servername = "localhost";
 $username = "root";
-$password = "neger";
+$password = "";
 
 $conn = new mysqli($servername, $username, $password);
 
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 	echo "Forbindelse oprettet"."<br>";
 }
 
-$sql = "CREATE DATABASE investeringstips";
+$sql = "CREATE DATABASE IF NOT EXISTS investeringstips";
 if ($conn->query($sql) === TRUE) {
 	echo "Database 'investeringstips' er oprettet";
 } else {
@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $sql = "CREATE TABLE IF NOT EXISTS investeringstips.bruger (
-	brugerID INT(6) UNSIGNED_AUTO_INCREMENT PRIMARY KEY,
+	brugerID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	guld INT(6),
 	navn VARCHAR(30),
 	kodeord VARCHAR(30)
@@ -34,14 +34,14 @@ if ($conn->query($sql) === TRUE) {
 	echo "Fejl ved oprettelse af tabellen 'bruger'";
 }
 
-$sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlæg (
-	indlægsID INT(6) UNSIGNED_AUTO_INCREMENT PRIMARY KEY,
+$sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
+	indlaegsID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	indhold VARCHAR(300),
-	brugerIDForIndlægger INT(6),
-	datoForIndlæg DATETIME,
+	brugerIDForIndlaegger INT(6),
+	datoForIndlae g DATETIME,
 	upvotes INT(6),
 	downvotes INT(6),
-	guld INT(6),
+	guld INT(6)
 )";
 
 if ($conn->query($sql) === TRUE) {
