@@ -3,7 +3,7 @@ include 'funktionsark.php';
 
 $servername = "localhost";
 $username = "root";
-$password = "neger";
+$password = "";
 $conn = new mysqli($servername, $username, $password);
 
 if ($conn->connect_error) {
@@ -37,7 +37,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
 	indlaegsID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	indhold VARCHAR(300),
 	brugerIDForIndlaegger INT(6),
-	datoForIndlae g DATETIME,
+	datoForIndlaeg DATETIME,
 	upvotes INT(6),
 	downvotes INT(6),
 	guld INT(6)
@@ -50,6 +50,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 if (!empty($_GET["Titel"]) && !empty($_GET["Indhold"])) {
-	$conn->query
+	//$conn->query
 }
 ?>

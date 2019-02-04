@@ -4,16 +4,23 @@ session_start();
 include 'db.php';
 
 $navn = $_GET['navn'];
-$password = $_GET['password'];
+$kodeord = $_GET['password'];
 
-echo "navn = " . $navn . "<br>";
-echo "Kodeord = " . $password . "<br>";
+echo "<br>Navn = " . $navn . "<br>";
+echo "Kodeord = " . $kodeord . "<br>";
 
-function fåID($navn, $password){
+if(tjekBrugerEksistere($conn, $navn, $kodeord)){
+    echo "6000";
+} else if(tjekKodeord()){
+    
+} else {
+    lavBruger($conn,$navn,$kodeord);
+}
+
+/*function fåID($navn){
     $sql =  "SELECT brugerID FROM investeringstips.bruger WHERE navn='$navn' LIMIT 1";
     $result = $conn->query($sql);
 
     echo $result;
-}
-
+}*/
 ?>
