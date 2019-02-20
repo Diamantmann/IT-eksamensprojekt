@@ -3,7 +3,7 @@ include 'funktionsark.php';
 
 $servername = "localhost";
 $username = "root";
-$password = "neger";
+$password = "";
 $conn = new mysqli($servername, $username, $password);
 
 if ($conn->connect_error) {
