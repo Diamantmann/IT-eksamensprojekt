@@ -11,7 +11,7 @@ function tjekBrugernavnEksistere($conn, $navn){
     $sql = "SELECT brugerID FROM investeringstips.bruger WHERE navn = '".$navn."' LIMIT 1";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    echo $row['brugerID'];
+    //echo $row['brugerID'];
     if($row['brugerID'] == null){
         return true;
     }
@@ -21,7 +21,7 @@ function tjekKodeord($conn, $navn, $kodeord){
     $sql = "SELECT kodeord FROM investeringstips.bruger WHERE navn = '".$navn."' LIMIT 1";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    echo $row['kodeord'];
+    //echo $row['kodeord'];
     if($row['kodeord'] != $kodeord){
         return true;
     }

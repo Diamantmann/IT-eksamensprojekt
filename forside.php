@@ -3,7 +3,7 @@
         <title></title>
     </head>
     <body>
-        <form action="db.php" method="get">
+        <form action="indsendindlaeg.php" method="get">
             Titel:       <input type="text" name="titel"><br>
             Indhold:   <input type="text" name="indhold"><br>
             <input type="submit" value="Indsend indlaeg">
@@ -13,7 +13,10 @@
 
 <?php
 
-$sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = 2";
+$id = $_SESSION['ID'];
+//echo $id;
+
+$sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = " . $id;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
