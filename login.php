@@ -12,7 +12,8 @@ $kodeord = $_GET['password'];
 if(tjekBrugerEksistere($conn, $navn, $kodeord)){
     echo "Du er nu logget ind!" . "<br>";
     $_SESSION['ID'] = udskrivId($conn,$navn,$kodeord);
-    //echo $_SESSION['ID'] . "<br>";
+    $id = $_SESSION['ID'];
+    echo $_SESSION['ID'] . "<br>";
     include 'forside.php';  
 } else if(tjekBrugernavnEksistere($conn, $navn)){
     include 'index.php';

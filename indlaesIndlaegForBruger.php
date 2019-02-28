@@ -3,7 +3,7 @@ session_start();
 include 'forbindelse.php';
 include 'forside.php';
 
-$sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = " . $id;
+$sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = " . $_SESSION['ID'];
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
