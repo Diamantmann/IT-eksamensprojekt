@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'forbindelse.php';
+include 'forside.php';
 
 echo $_SESSION['ID'];
 $id = $_SESSION['ID'];
