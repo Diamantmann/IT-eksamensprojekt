@@ -1,5 +1,6 @@
 <?php
-include 'db.php';
+include 'opretDatabase.php';
+include 'funktionsark.php';
 
 $navn = $_GET['brugernavn'];
 $kodeord = $_GET['kodeord'];

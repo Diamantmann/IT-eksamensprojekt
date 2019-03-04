@@ -28,7 +28,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
 	indhold VARCHAR(300),
 	brugerIDForIndlaegger INT(6) UNSIGNED,
 	FOREIGN KEY (brugerIDForIndlaegger) REFERENCES bruger(brugerID),
-	datoForIndlaeg DATETIME,
+	datoForIndlaeg TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	upvotes INT(6),
 	downvotes INT(6),
 	guld INT(6)
@@ -37,6 +37,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
 if ($conn->query($sql) === TRUE) {
 	echo "Tabellen 'indlæg' er oprettet"."<br>";
 } else {
-	echo "Fejl ved oprettelse af tabellen 'indlæg'"."<br>";
+	echo $sql;
+	echo "Fejl ved oprettelse af tabellen 'indlæg'"."<br>" . $conn->error;
 }
 ?>
