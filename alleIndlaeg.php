@@ -16,7 +16,8 @@ if ($result->num_rows > 0) {
         </form>
 
         <form action="guld.php" method="get">
-            <input type="submit' value="Downvote">
+        	<input type="hidden" name="downvote" value="<?php echo $row["indlaegsID"]?>">
+            <input type="submit" value="Downvote">
         </form>
         <?php
     }
