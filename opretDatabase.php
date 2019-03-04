@@ -37,7 +37,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
 if ($conn->query($sql) === TRUE) {
 	echo "Tabellen 'indlæg' er oprettet"."<br>";
 } else {
-	echo $sql;
+	//echo $sql;
 	echo "Fejl ved oprettelse af tabellen 'indlæg'"."<br>" . $conn->error;
 }
 
@@ -45,7 +45,15 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.upvoteTransaktioner (
 	upvoteID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	brugerIDForUpvoter INT(6) UNSIGNED,
 	FOREIGN KEY (brugerIDForUpvoter) REFERENCES bruger(brugerID),
-	indlaegsID INT(6) UNSIGNED
-	FOREIGN KEY (indlaegsID) REFERENCES indlaeg(indlaegsID)
+	indlaegsIDForIndlaeg INT(6) UNSIGNED,
+	FOREIGN KEY (indlaegsIDForIndlaeg) REFERENCES indlaeg(indlaegsID)
 )";
+
+if ($conn->query($sql) === TRUE) {
+	echo "Tabellen 'upvoteTransaktioner' er oprettet"."<br>";
+} else {
+	//echo $sql;
+	echo "Fejl ved oprettelse af tabellen 'upvoteTransaktioner'"."<br>" . $conn->error;
+}
+
 ?>
