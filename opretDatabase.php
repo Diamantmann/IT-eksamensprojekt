@@ -40,4 +40,12 @@ if ($conn->query($sql) === TRUE) {
 	echo $sql;
 	echo "Fejl ved oprettelse af tabellen 'indlæg'"."<br>" . $conn->error;
 }
+
+$sql = "CREATE TABLE IF NOT EXISTS investeringstips.upvoteTransaktioner (
+	upvoteID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	brugerIDForUpvoter INT(6) UNSIGNED,
+	FOREIGN KEY (brugerIDForUpvoter) REFERENCES bruger(brugerID),
+	indlaegsID INT(6) UNSIGNED
+	FOREIGN KEY (indlaegsID) REFERENCES indlaeg(indlaegsID)
+)";
 ?>
