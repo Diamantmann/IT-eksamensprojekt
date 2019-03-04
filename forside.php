@@ -5,7 +5,8 @@
     <body>
         <h1>Velkommen! <br></h1>
         <a href="opretIndlaeg.php"><button>Opret et indlæg</button></a>
-        <a href="indlaesIndlaegForBruger.php"><button>Se alle dine indlæg!</button></a>
+        <a href="indlaesIndlaegForBruger.php"><button>Se egne indlæg!</button></a>
+        <a href="alleIndlaeg.php"><button>Se alle indlæg!</button></a>
     </body>
 </html>
 
