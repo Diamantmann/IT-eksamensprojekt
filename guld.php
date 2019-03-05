@@ -1,6 +1,9 @@
 <?php
 session_start();
 include 'forbindelse.php';
+include 'alleIndlaeg.php';
+
+//echo $_SESSION['ID'];
 
 if (!empty($_GET["upvote"])) {
 	$upvoteID = $_GET["upvote"];
@@ -23,7 +26,7 @@ if (!empty($_GET["downvote"])) {
 	
 	if ($guld->num_rows > 0) {
 		while($maengdeGuld = $guld->fetch_assoc()) {
-			$nyMaengdeGuld = $maengdeGuld["guld"] + 1;
+			$nyMaengdeGuld = $maengdeGuld["guld"] - 1;
 			$sql = "UPDATE investeringstips.indlaeg SET guld = $nyMaengdeGuld WHERE indlaegsID = $downvoteID";
 			$conn->query($sql);
 		}
