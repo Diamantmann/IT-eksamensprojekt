@@ -12,8 +12,8 @@ if ($conn->query($sql) === TRUE) {
 $sql = "CREATE TABLE IF NOT EXISTS investeringstips.bruger (
 	brugerID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	guld INT(6),
-	navn VARCHAR(30),
-	kodeord VARCHAR(30)
+	navn VARCHAR(30) NOT NULL,
+	kodeord VARCHAR(30) NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -46,7 +46,8 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.upvoteTransaktioner (
 	brugerIDForUpvoter INT(6) UNSIGNED,
 	FOREIGN KEY (brugerIDForUpvoter) REFERENCES bruger(brugerID),
 	indlaegsIDForIndlaeg INT(6) UNSIGNED,
-	FOREIGN KEY (indlaegsIDForIndlaeg) REFERENCES indlaeg(indlaegsID)
+	FOREIGN KEY (indlaegsIDForIndlaeg) REFERENCES indlaeg(indlaegsID),
+	upvoteEllerDownvote TINYINT
 )";
 
 if ($conn->query($sql) === TRUE) {

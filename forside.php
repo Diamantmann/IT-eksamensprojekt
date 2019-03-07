@@ -7,6 +7,7 @@
         <a href="opretIndlaeg.php"><button>Opret et indlæg</button></a>
         <a href="indlaesIndlaegForBruger.php"><button>Se egne indlæg!</button></a>
         <a href="alleIndlaeg.php"><button>Se alle indlæg!</button></a>
+        <a href="opretDatabase.php"><button>Opret database og tabeller!</button></a>
     </body>
 </html>
 
