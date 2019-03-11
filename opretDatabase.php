@@ -12,6 +12,7 @@ if ($conn->query($sql) === TRUE) {
 $sql = "CREATE TABLE IF NOT EXISTS investeringstips.bruger (
 	brugerID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	guld INT(6),
+	procentdelAfGuld INT(6),
 	navn VARCHAR(30) NOT NULL,
 	kodeord VARCHAR(30) NOT NULL
 )";
@@ -19,7 +20,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.bruger (
 if ($conn->query($sql) === TRUE) {
 	echo "Tabellen 'bruger' er oprettet"."<br>";
 } else {
-	echo "Fejl ved oprettelse af tabellen 'bruger'"."<br>";
+	echo "Fejl ved oprettelse af tabellen 'bruger'"."<br>". $conn->error;
 }
 
 $sql = "CREATE TABLE IF NOT EXISTS investeringstips.indlaeg (
