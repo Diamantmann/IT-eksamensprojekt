@@ -5,7 +5,7 @@
     <body>
         <form action="opretBrugerFunc.php" method="get">
             Brugernavn: <input type="text" name="brugernavn"><br>
-            Koderord:   <input type="password" name="kodeord">
+            Kodeord:   <input type="password" name="kodeord">
             <input type="submit" value="Opret Bruger">
         </form>
     </body>
