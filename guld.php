@@ -26,7 +26,7 @@ if (!empty($_GET["upvote"])) {
 
 if (!empty($_GET["downvote"])) {
 	$downvoteID = $_GET["downvote"];
-	$sql = "INSERT INTO investeringstips.upvotetransaktioner(brugerIDForUpvoter, indlaegsIDForIndlaeg, upvoteEllerDownvote) VALUES ($ID, $IID, 0)";
+	$sql = "INSERT INTO investeringstips.upvotetransaktioner(brugerIDForUpvoter, indlaegsIDForIndlaeg, upvoteEllerDownvote) VALUES ($ID, $IID, -1)";
 	$conn->query($sql);
 	/*$sql = "SELECT guld FROM investeringstips.indlaeg WHERE indlaegsID = $downvoteID";
 	$guld = $conn->query($sql);

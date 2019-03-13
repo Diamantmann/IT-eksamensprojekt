@@ -48,7 +48,7 @@ $sql = "CREATE TABLE IF NOT EXISTS investeringstips.upvoteTransaktioner (
 	FOREIGN KEY (brugerIDForUpvoter) REFERENCES bruger(brugerID),
 	indlaegsIDForIndlaeg INT(6) UNSIGNED,
 	FOREIGN KEY (indlaegsIDForIndlaeg) REFERENCES indlaeg(indlaegsID),
-	upvoteEllerDownvote TINYINT
+	upvoteEllerDownvote INT(1)
 )";
 
 if ($conn->query($sql) === TRUE) {
