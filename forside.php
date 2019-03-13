@@ -13,26 +13,39 @@
 
 <?php
 include 'forbindelse.php';
-/*session_start();
+session_start();
 $id = $_SESSION['ID'];
-echo $id;*/
 
-/*$sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = " . $id;
+$totalGuld;
+$guld;
+
+$sql = "SELECT guld FROM investeringstips.bruger WHERE brugerID = $id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<br>Titel: " . $row["titel"]. "<br>Indlæg: " . $row["indhold"] . "<br>Guld: " . $row["guld"] . "<br>Dato for indlæg: " . $row["datoForIndlaeg"] . "<br>";
-    }
-}*/
-
-
-$sql = "SELECT guld FROM investeringstips.bruger WHERE brugerID = 1";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+        $guld = $row['guld'];
         echo "<br>Dit guld: " . $row["guld"];
+    }
+}
+
+$sql = "SELECT SUM(guld) AS guld FROM investeringstips.indlaeg";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $totalGuld = $row['guld'];
+    }
+}
+
+$procentdelAfGuld = $guld/$totalGuld*100;
+echo "<br>procentdel af guld: " . $procentdelAfGuld;
+$sql = "UPDATE investeringstips.bruger SET procentdelAfGuld = $procentdelAfGuld WHERE brugerID = $id";
+$conn->query($sql);
+
+if ($procentdelAfGuld->num_rows > 0) {
+    while($row = $procentdelAfGuld->fetch_assoc()) {
+        echo "<br>Procentdel af alt guld: " . $row["procentdelAfGuld"];
     }
 }
 ?>
