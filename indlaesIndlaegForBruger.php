@@ -1,6 +1,5 @@
 <?php
-session_start();
-include 'forbindelse.php';
+//session_start();
 include 'forside.php';
 
 $sql = "SELECT titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = " . $_SESSION['ID'];

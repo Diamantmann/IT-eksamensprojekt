@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'forbindelse.php';
 include 'forside.php';
 
 echo $_SESSION['ID'];

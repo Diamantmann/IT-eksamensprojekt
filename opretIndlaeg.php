@@ -1,7 +1,6 @@
 <?php
 session_start();
-include 'forbindelse.php';
-
+include 'forside.php';
 
 ?>
 <html>

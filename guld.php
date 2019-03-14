@@ -8,6 +8,8 @@ $IID = $_GET["ID"];
 $_SESSION['IID'] = $IID;
 echo $_SESSION['IID'];
 
+session_abort();
+
 if (!empty($_GET["upvote"])) {
 	$upvoteID = $_GET["upvote"];
 	$sql = "INSERT INTO investeringstips.upvotetransaktioner(brugerIDForUpvoter, indlaegsIDForIndlaeg, upvoteEllerDownvote) VALUES ($ID, $IID, 1)";
@@ -42,23 +44,6 @@ if (!empty($_GET["downvote"])) {
 
 
 include 'opdaterGuld.php';
-include 'alleIndlaeg.php';
+//include 'alleIndlaeg.php';
 
 ?>
-
-POST:
-ID(Primary Key)
-TITEL
-BEKSRIVELSE
-GULD!
-
-POINT:
-pointID(Primary Key)
-POSTID(Forering Key)
-BRUGERID(Foreign Key)
-LIKE(BOOLEAN)
-
-USER:
-ID(Primary Key)
-
-TJEKKER SIDSTE ID FRA BRUGEREN TIL EN POST; DETTE ER POINTET DER TILEGNES POSTEN.

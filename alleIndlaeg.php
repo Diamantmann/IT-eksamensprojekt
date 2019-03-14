@@ -24,17 +24,5 @@ if ($result->num_rows > 0) {
         <?php
     }
 }
-$brugerGuld;
 
-$sql = "SELECT SUM(guld) AS guld FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = $id";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) {
-		$brugerGuld = $row['guld'];
-	}
-}
-
-$sql = "UPDATE investeringstips.bruger SET guld = $brugerGuld WHERE brugerID = $id";
-$conn->query($sql)
 ?>
