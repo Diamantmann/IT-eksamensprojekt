@@ -6,8 +6,8 @@
     <body>
         <div>
         <form action="login.php" method="get">
-                Navn:   <input type="text" name="navn"><br>
-                Koderord:   <input type="password" name="password"><br>
+                <label>Navn:</label>   <input type="text" name="navn"><br>
+                <label>Koderord:<label>   <input type="password" name="password"><br>
                 <input type="submit" value="login">
             </form>
             <form action="opretBruger.php" method="get">

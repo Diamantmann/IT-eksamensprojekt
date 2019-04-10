@@ -20,6 +20,6 @@ if ($guldSum->num_rows > 0) {
     }
 }
 
-include 'forside.php';
+include 'alleIndlaeg.php';
 
 ?>

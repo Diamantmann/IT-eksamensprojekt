@@ -1,27 +1,4 @@
-/*input {
-    width: 10%;
-    position: fixed;
-    width: 5%;
-    margin-left: 10px;
-}
-
-body {
-    background-color: rgb(147, 149, 252);
-}
-
-p {
-    text-align: center;
+label{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    color: snow;
 }
-
-pre {
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-div {   
-    float: left;
-    vertical-align: top;
-}*/
