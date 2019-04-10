@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Opret bruger</title>
+        <link rel = "stylesheet" type = "text/css" href = "stylesheet/stylesheet.css"/>
     </head>
     <body>
         <form action="opretBrugerFunc.php" method="get">
