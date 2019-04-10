@@ -2,3 +2,74 @@ label{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
+
+td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table{
+    border: 1px solid black;
+    padding: 5px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(214, 252, 255);
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+input,button{
+    background-color: rgb(97, 235, 245);
+    color: rgb(0, 0, 0);
+}
+
+#div1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    display: block;
+}
+
+#logud{
+    margin-left: auto;
+    width:4%;
+    display: block;
+}
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#titel{
+    font-size: 18px;
+}
+
+#indlaeg{
+    font-size: 14px;
+}
+
+#guld{
+    font-size: 10px;
+}
+
+#dato{
+    font-size: 10px;
+}
+
+#seGuld{
+    font-size: 60px;
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+#procentAfGuld{
+    font-size: 20px;
+    color: darkgoldenrod;
+    text-align: center;
+}
