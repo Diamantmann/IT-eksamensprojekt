@@ -13,6 +13,10 @@ if ($result->num_rows > 0) {
                 <input type="hidden" name="ID" value="<?php echo $row["indlaegsID"]?>">
                 <input type="submit" value="Opdater indlæg">
             </form>
+            <form action="sletIndlaeg.php" method="get">
+                <input type="hidden" name="ID" value="<?php echo $row["indlaegsID"]?>">
+                <input type="submit" value="Slet indlæg">
+            </form>
         <?php
         echo "---------------------------------------------------------------------" . "<br>";
     }

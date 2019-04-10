@@ -9,6 +9,11 @@
         <a href="alleIndlaeg.php"><button>Se alle indlæg!</button></a>
         <a href="opretDatabase.php"><button>Opret database og tabeller!</button></a>
         <a href="seGuldForBruger.php"><button>Se guld</button></a>
+
+        <form action="index.php">
+            <input type="submit" value="Log Ud">
+        </form>
+
     </body>
 </html>
 
