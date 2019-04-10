@@ -1,11 +1,3 @@
-<html>
-    <body>
-        <form action="index.php">
-            <input type="submit" value="Log Ud">
-        </form>
-    </body>
-</html>
-
 <?php
 $servername = "localhost";
 $username = "root";
