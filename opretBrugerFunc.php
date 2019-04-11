@@ -5,6 +5,7 @@ include 'funktionsark.php';
 $navn = $_GET['brugernavn'];
 $kodeord = $_GET['kodeord'];
 
+//Denne funktion sætter brugeren i systemet, hvis hverken brugernavnet eller kodeordet er tomt.
 if($navn == "" || $kodeord == ""){
     echo "Brugernavnet eller kodeordet kan IKKE være tomt";
     include 'opretBruger.php';

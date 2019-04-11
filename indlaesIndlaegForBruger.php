@@ -7,6 +7,7 @@ $result = $conn->query($sql);
 ?>
 <table>
 <?php
+//Sætter ens egne indlæg op i en tabel, hvor man kan gå videre til 'opdaterIndlaeg.php' eller 'sletIndlaeg.php'. Knapper har indlaegsID som en skjult værdi.
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         ?>

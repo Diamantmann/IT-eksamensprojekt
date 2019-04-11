@@ -9,7 +9,7 @@
         <a href="opretIndlaeg.php"><button>Opret et indlæg</button></a>
         <a href="indlaesIndlaegForBruger.php"><button>Se egne indlæg!</button></a>
         <a href="alleIndlaeg.php"><button>Se alle indlæg!</button></a>
-        <a href="seGuldForBruger.php"><button>Se guld</button></a>
+        <a href="seGuldForBruger.php"><button>Se din guldprocent</button></a>
         </div>
 
         <form action="index.php">
@@ -20,6 +20,7 @@
 </html>
 
 <?php
+//Inkludere forbindelse. Sessions_ID bliver sat. Herfra kan man komme til andre sider.
 include 'forbindelse.php';
 @session_start();
 

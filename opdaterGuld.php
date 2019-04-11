@@ -3,6 +3,8 @@
 
 $IID = $_SESSION['IID'];
 
+//Denne sql-kommando er en sjov en. Det er en nested select kommando, som først tager det største upvoteID for hvert brugerID til indlaegget man lige har manipuleret med votering. Derefter tages summen af upvoteEllerDownvote kolonnen, som vil være indlæggets
+//slutværdi.
 $sql = "SELECT SUM(upvoteEllerDownvote) as guldsum FROM investeringstips.upvotetransaktioner i1
 inner join
 (

@@ -1,6 +1,7 @@
 <?php
 include 'forbindelse.php';
 
+//Databasen og dets tabeller oprettes, så snart en bruger oprettes. Da man altid skal oprette en bruger inden man kan logge ind, vil databasen altid skabes alligevel.
 $sql = "CREATE DATABASE IF NOT EXISTS investeringstips";
 
 if ($conn->query($sql) === TRUE) {

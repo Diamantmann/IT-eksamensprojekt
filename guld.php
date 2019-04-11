@@ -10,6 +10,7 @@ echo $_SESSION['IID'];
 
 session_abort();
 
+//Hvis upvote var knappen der blev trykket på, så sætter den et '1' índ i tabellen upvotetransaktioner og går videre til opdaterGuld.php
 if (!empty($_GET["upvote"])) {
 	$upvoteID = $_GET["upvote"];
 	$sql = "INSERT INTO investeringstips.upvotetransaktioner(brugerIDForUpvoter, indlaegsIDForIndlaeg, upvoteEllerDownvote) VALUES ($ID, $IID, 1)";
@@ -26,6 +27,7 @@ if (!empty($_GET["upvote"])) {
 	}*/
 }
 
+//Hvis downvote var knappen der blev trykket på, så sætter den et '-1' índ i tabellen upvotetransaktioner og går videre til opdaterGuld.php
 if (!empty($_GET["downvote"])) {
 	$downvoteID = $_GET["downvote"];
 	$sql = "INSERT INTO investeringstips.upvotetransaktioner(brugerIDForUpvoter, indlaegsIDForIndlaeg, upvoteEllerDownvote) VALUES ($ID, $IID, -1)";

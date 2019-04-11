@@ -9,6 +9,7 @@ $kodeord = $_GET['password'];
 //echo "<br>Navn = " . $navn . "<br>";
 //echo "Kodeord = " . $kodeord . "<br>";
 
+//Denne lange if-statement tjekker hvorvidt ens kodeord og brugernavn er tilsluttet den konto man prøver at logge ind på. Hvis ikke, så siger hvad fejlen er, og hvis der er en konto, logger den ind.
 if(tjekBrugerEksistere($conn, $navn, $kodeord)){
     echo "Du er nu logget ind!" . "<br>";
     $_SESSION['ID'] = udskrivId($conn,$navn,$kodeord);

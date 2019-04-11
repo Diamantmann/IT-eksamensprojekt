@@ -1,4 +1,5 @@
 <?php
+//mysqli oprettes.
 $servername = "localhost";
 $username = "root";
 $password = "";

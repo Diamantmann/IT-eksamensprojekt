@@ -4,6 +4,7 @@ include 'forside.php';
 @session_start();
 $ID = $_GET["ID"];
 
+//Sletter et indlæg for en bruger. Man kan kun slette egne indlæg.
 $sql = "DELETE FROM investeringstips.upvotetransaktioner WHERE indlaegsIDForIndlaeg = '".$_GET["ID"]."' ";
 
 if($conn->query($sql)===true){

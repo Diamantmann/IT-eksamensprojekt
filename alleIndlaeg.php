@@ -1,17 +1,20 @@
 <html>
     <head>
-    <title>BM2</title>
+    <title>Indlaeg</title>
 </head>
 <?php
 
+//Forside inkluderes
 include 'forside.php';
 
+//Vælger alle indlaeg;
 $sql = "SELECT indlaegsID, titel, indhold, guld, datoForIndlaeg FROM investeringstips.indlaeg ORDER BY guld DESC";
 $result = $conn->query($sql);
 
 ?>
 <table>
     <?php
+    //Herefter udskrives de i tabeller, der er sat op, således at de kan læses i klienten. Knapper der kan trykkes på, sender en videre, hvor ID'et af indlægget sendes med.
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 ?>

@@ -5,6 +5,7 @@ include 'forside.php';
 echo $_SESSION['ID'];
 $id = $_SESSION['ID'];
 
+//Indsætter indlaeget man har lavet ind i tabellen indlaeg.
 if (!empty($_GET["titel"]) && !empty($_GET["indhold"])) {
 	$sql = "INSERT INTO investeringstips.indlaeg (
 	titel, indhold, brugerIDForIndlaegger, upvotes, downvotes, guld) 

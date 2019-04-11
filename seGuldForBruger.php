@@ -6,6 +6,7 @@ $totalGuld;
 $guld;
 $brugerGuld;
 
+//Vælger summen af alt ens guld for en bruger.
 $sql = "SELECT SUM(guld) AS guld FROM investeringstips.indlaeg WHERE brugerIDForIndlaegger = $id";
 $result = $conn->query($sql);
 
@@ -15,10 +16,11 @@ if ($result->num_rows > 0) {
 	}
 }
 
+//Opdateret værdien i brugertabellen.
 $sql = "UPDATE investeringstips.bruger SET guld = $brugerGuld WHERE brugerID = $id";
 $conn->query($sql);
 
-
+//Vælger derefter guldet fra brugertabellen og udskriver det.
 $sql = "SELECT guld FROM investeringstips.bruger WHERE brugerID = $id";
 $result = $conn->query($sql);
 
@@ -29,6 +31,7 @@ if ($result->num_rows > 0) {
     }
 }
 
+//Derefter tages summen af alt guld i databasen og udregner hvor stor en procent brugeren har.
 $sql = "SELECT SUM(guld) AS guld FROM investeringstips.indlaeg";
 $result = $conn->query($sql);
 
